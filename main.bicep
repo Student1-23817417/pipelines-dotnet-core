@@ -5,9 +5,7 @@ targetScope = 'subscription'
 param resGroup object
 
 resource rg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
-  name: 'string'
+  name: resGroup.name
   location: deployment().location
-  tags: {}
-  properties: {
-  }
+  tags: resGroup.tags
 }
